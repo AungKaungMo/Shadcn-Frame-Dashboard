@@ -1,6 +1,8 @@
 import ProtectedRoute from "@/components/custom/ProtectedRoute";
 import MainLayout from "@/layout/mainLayout";
-import { AllProduct, Dashboard, NewProduct, Order, RoleCreate, RoleEdit, RoleManagement, UserManagement } from "@/page";
+import { AllProduct, Dashboard, NewProduct, Order, RoleCreate, RoleEdit, RoleManagement, UserManagement, Location } from "@/page";
+import LocationCreate from "@/page/Admin/Location/create";
+import LocationEdit from "@/page/Admin/Location/edit";
 
 const MainRoutes = {
     path: '/',
@@ -28,6 +30,19 @@ const MainRoutes = {
             element: <ProtectedRoute element={<Order />} allowedRoles={['developer']} /> 
         },
 
+        //Location
+        {
+            path: '/location',
+            element: <ProtectedRoute element={<Location />} allowedRoles={['developer']} />
+        },  
+        {
+            path: '/location/new',
+            element: <ProtectedRoute element={<LocationCreate />} allowedRoles={['developer']} />
+        },  
+        {
+            path: '/location/:id',
+            element: <ProtectedRoute element={<LocationEdit />} allowedRoles={['developer']} />
+        },  
         {
             path: '/user-management',
             children: [

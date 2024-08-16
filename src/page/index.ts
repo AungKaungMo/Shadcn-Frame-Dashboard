@@ -7,3 +7,4 @@ export { default as RoleManagement } from "./Admin/UserManagement/Role";
 export { default as RoleCreate } from "./Admin/UserManagement/Role/create";
 export { default as RoleEdit } from "./Admin/UserManagement/Role/edit";
 export { default as UserManagement } from "./Admin/UserManagement/User";
+export { default as Location } from "./Admin/Location";

@@ -36,7 +36,7 @@ const Login = () => {
 
     const onSubmit: SubmitHandler<FormFields> = async (user) => {
         const data = await createUser(user);
-        console.log(data.data, 'data')
+        // console.log(data.data, 'data')
         if (data?.data) {
             setUser(data?.data)
             navigate('/');

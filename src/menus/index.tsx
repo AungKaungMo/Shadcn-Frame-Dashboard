@@ -1,5 +1,5 @@
 import { SideNavItemGroup } from "@/types";
-import { LayoutDashboard, PartyPopper, ShoppingBag, User } from "lucide-react";
+import { LayoutDashboard, LocateIcon, PartyPopper, ShoppingBag, User } from "lucide-react";
 
 
 export const SideNavbar: SideNavItemGroup[] = [
@@ -32,8 +32,14 @@ export const SideNavbar: SideNavItemGroup[] = [
         ]
     },
     {
-        title: 'User',
+        title: 'Master Data',
         menuList: [
+            {
+                title: "Location",
+                path: "/location",
+                icon: LocateIcon,
+                role: ['developer']
+            },
             {
                 title: "UserManagement",
                 path: "/user-management",
